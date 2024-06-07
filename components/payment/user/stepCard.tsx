@@ -81,7 +81,7 @@ const StepCard = ({ payMethods, setPayMethodIndex, payMethodIndex }: Props) => {
 				const currentPayMethod = payMethods[payMethodIndex];
 				console.log(balances);
 				
-				const balance = balances.find((balance: Balance) => balance.card_number === +currentPayMethod.card_number);
+				const balance = balances.find((balance: Balance) => balance.card_number === currentPayMethod.card_number);
 				return balance ? withDots(balance.amount) : 'No se encontró saldo';
 			}
 		}
