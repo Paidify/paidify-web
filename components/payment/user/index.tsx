@@ -87,6 +87,7 @@ const PaymentForm = ({ payMethods, campuses, payConceptId, payConceptPersonId, s
 			payMethods={payMethods}
 			setPayMethodIndex={setPayMethodIndex}
 			payMethodIndex={payMethodIndex}
+			key={0}
 		/>,
 		<StepForm
 			campuses={campuses}
@@ -97,6 +98,7 @@ const PaymentForm = ({ payMethods, campuses, payConceptId, payConceptPersonId, s
 			resetField={resetField}
 			enableInstallments={enableInstallments}
 			setEnableInstallments={setEnableInstallments}
+			key={1}
 		/>,
 		<StepConfirm
 			campus={campuses.find(({ id }) => id === +watch('campus'))?.campus || ''}
@@ -105,6 +107,7 @@ const PaymentForm = ({ payMethods, campuses, payConceptId, payConceptPersonId, s
 			cvv={watch('cvv')}
 			expMonth={watch('exp_month')}
 			expYear={watch('exp_year')}
+			key={2}
 		/>
 	];
 
